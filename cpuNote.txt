@@ -6,3 +6,13 @@ input[4:0] x,y;
 output[31:0] outC;
 reg[31:0] outC;
 wire[31:0]cw,cs,ce,cn;
+
+reg[4:0] opcode,mode;
+reg[9:0] rega,regb;
+case(opcode)
+4'b0000:// the add
+4'b0001:// the mull
+4'b0010:// the move
+4'b0011:// the set
+endcase
+endmodule
