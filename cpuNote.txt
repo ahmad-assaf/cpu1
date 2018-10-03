@@ -9,6 +9,27 @@ wire[31:0]cw,cs,ce,cn;
 
 reg[4:0] opcode,mode;
 reg[9:0] rega,regb;
+case(mode)
+5'b00000:// conscons
+5'b00001:// regreg
+5'b00010:// extext
+5'b00011:// idid
+5'b00100:// out_const
+5'b00101:// out_reg
+5'b00110:// out_ext
+5'b00111:// out_id
+5'b01000:// reg_const
+5'b01001:// reg_ext
+5'b01010:// reg_id
+5'b01011:// const_reg
+5'b01100: // const_ext
+5'b01101: // const_id
+5'b01110: // ext_reg
+5'b01111: // ext_const
+5'b10000: // ext_id
+5'b10001: // id_reg
+5'b10010: // id_const
+5'b10011: // id_ext
 case(opcode)
 4'b0000:// the add
 4'b0001:// the mull
