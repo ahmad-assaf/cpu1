@@ -210,11 +210,54 @@ module cpu1(
                  endcase  
      end//const_ext
     
-    `const_id:; // const_id
-    `ext_reg:; // ext_reg
-    `ext_const:; // ext_const
-    `ext_id:; // ext_id
-    
+    `const_id:begin
+         arga <= instructions[pc][20:11];
+         if(instructions[pc][1:0]== 2'b00 )begin
+            argb = x;
+            end
+         else begin
+            argb = y; 
+             end
+     end// const_id
+     
+     
+    `ext_reg: begin
+             case(instructions[pc][1:0])
+                     `ex_cw: arga=cw;
+                     `ex_cs: arga=cs;
+                     `ex_cn: arga=cn;             
+                     `ex_ce: arga=ce;
+                     endcase
+             argb <= myregs[instructions[pc][9:0]];          
+
+    end// ext_reg
+    `ext_const: begin
+                case(instructions[pc][1:0])
+                        `ex_cw: arga=cw;
+                        `ex_cs: arga=cs;
+                        `ex_cn: arga=cn;             
+                        `ex_ce: arga=ce;
+                        endcase
+                argb <= instructions[pc][9:0];          
+
+       end// ext_const
+       
+    `ext_id: begin
+                   case(instructions[pc][1:0])
+                           `ex_cw: arga=cw;
+                           `ex_cs: arga=cs;
+                           `ex_cn: arga=cn;             
+                           `ex_ce: arga=ce;
+                           endcase
+                           
+                    if(instructions[pc][1:0]== 2'b00 )begin
+                        argb = x;
+                        end
+                     else begin
+                        argb = y; 
+                        end
+      end//ext_id
+
     `id_reg:begin
                 if(instructions[pc][11:10]== 2'b00 ) begin  
                     arga = x;
