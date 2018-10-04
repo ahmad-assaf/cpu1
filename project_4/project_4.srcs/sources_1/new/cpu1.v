@@ -33,7 +33,7 @@ module cpu1(
     
     wire[31:0] cw,cn,cs,ce;
     reg [31:0] outC;
-    
+    reg [31:0] myregs[15:0];
     reg[3:0] opcode;
     reg[4:0]mode;
     reg[9:0] arga,argb;
@@ -70,7 +70,7 @@ module cpu1(
     initial
     begin
         $readmemb("E:\\test\\testb.txt",instructions);
-        for(i=0 ; i < 30 ; i=i+1)
+        for(i=0 ; i < 100 ; i=i+1)
         begin
         $display("%b",instructions[i]);
         end
@@ -87,9 +87,12 @@ module cpu1(
     case(mode)
     `const_const: begin
     arga <= instructions[pc][20:11];
-    arga <= instructions[pc][10:1];
+    argb <= instructions[pc][10:1];
     end// conscons 
-    `reg_reg: ;// regreg
+    `reg_reg: begin
+        arga <= myregs[instructions[pc][20:11]];
+        argb <= myregs[instructions[pc][10:1]];
+        end // regreg
     `ext_ext: ;// extext
     `id_id: ;// idid
     `out_const: ;// out_const
