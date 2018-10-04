@@ -39,6 +39,8 @@ module cpu1(
     reg[9:0] rega,regb;
     reg [29:0] instructions[100:0];
     integer i,pc=0;
+    
+    //defines
     initial
     begin
         $readmemb("E:\\test\\testb.txt",instructions);
@@ -47,13 +49,15 @@ module cpu1(
         $display("%b",instructions[i]);
         end
         $finish;
+        opcode <= instructions[pc][29:26];
+        mode <= instructions[pc][25:21];
+        
     end
-    opcode <= instructions[pc][29:26];
     
-    mode<=instructions[pc][25:21];
+
     
    // mode <= {ins[0],ins[1],ins[2],ins[3]};
-    
+    always @(posedge clk) begin
     case(mode)
     5'b00000:;// conscons
     5'b00001:;// regreg
@@ -82,4 +86,5 @@ module cpu1(
     4'b0010:;// the move
     4'b0011:;// the set
     endcase
+    end
 endmodule
