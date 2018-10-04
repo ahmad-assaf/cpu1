@@ -1,0 +1,59 @@
+#!/usr/bin/perl -w
+
+my @tokens;
+our %kernel_graph;
+my $num_of_targets=0;
+my $curr_BB =0;
+
+for (my $i=0; $i<32; $i=$i+1) {
+	$kernel_graph{$i} = {
+				0 => 0,
+				1 => 0,
+				2 => 0,
+				3 => 0,
+			};
+}
+
+		
+while(<>){
+	@tokens = split /\s+/;
+	
+	if	($tokens[0] =~ "SET_COND_") {	
+		
+		my @token_0 = (split /_/, $tokens[0]);
+		(my $BB, my $string, my $cond) = (split /_/, $tokens[0])[2, 3, -1];
+		my %hash_entry;
+		if ($token_0[-2] eq "IF"){
+			$kernel_graph{$curr_BB}->{$cond} = $BB;
+			$kernel_graph{$curr_BB}->{$cond+2} = 1;
+			
+		}
+		else {
+			if (!$kernel_graph{$curr_BB}->{2}) {
+				$kernel_graph{$curr_BB}->{0} = $BB;
+			}		
+			if (!$kernel_graph{$curr_BB}->{3}) {
+				$kernel_graph{$curr_BB}->{1} = $BB;
+			}
+		}
+		
+	}
+
+	elsif ($tokens[0] eq "BB"){
+		$curr_BB = $tokens[4];
+	}
+}
+
+print "$_ $kernel_graph{$_}->{0} $kernel_graph{$_}->{1}\n" foreach (keys %kernel_graph);
+
+open (my $KERNEL_GRAPH,">", "./kernel_graph.pm") or die "couldn't open kernel_graph.pm\n";
+
+printf $KERNEL_GRAPH "package kernel_graph;\n";
+printf $KERNEL_GRAPH "use warnings;\nuse strict;\n";
+printf $KERNEL_GRAPH "our \$graph = {\n";
+foreach (keys %kernel_graph){
+	printf $KERNEL_GRAPH "\t$_ => [$kernel_graph{$_}->{0}, $kernel_graph{$_}->{1}],\n";
+}
+
+printf $KERNEL_GRAPH "};";
+

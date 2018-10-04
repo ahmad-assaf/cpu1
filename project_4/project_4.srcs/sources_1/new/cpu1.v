@@ -61,6 +61,11 @@ module cpu1(
      `define id_const   5'b10010 // id_const
      `define id_ext   5'b10011 // id_ext
      
+     `define ex_cw   2'b00 // cw wire 
+     `define ex_cn   2'b01 // cn wire
+     `define ex_ce   2'b10 // ce wire      
+     `define ex_cs   2'b11 // cs wire
+     
     `define add 4'b0000// the add
     `define mull 4'b0001// the mull
     `define move 4'b0010// the move
@@ -75,8 +80,8 @@ module cpu1(
         $display("%b",instructions[i]);
         end
         $finish;
-        opcode <= instructions[pc][29:26];
-        mode <= instructions[pc][25:21];
+        opcode <= instructions[pc][28:25];
+        mode <= instructions[pc][24:20];
         
     end
     
@@ -86,32 +91,170 @@ module cpu1(
     always @(posedge clk) begin
     case(mode)
     `const_const: begin
-    arga <= instructions[pc][20:11];
-    argb <= instructions[pc][10:1];
-    end// conscons 
+        arga <= instructions[pc][19:10];
+        argb <= instructions[pc][9:0];
+     end// conscons 
+     
     `reg_reg: begin
-        arga <= myregs[instructions[pc][20:11]];
-        argb <= myregs[instructions[pc][10:1]];
-        end // regreg
-    `ext_ext: ;// extext
-    `id_id: ;// idid
-    `out_const: ;// out_const
-    `out_reg:;// out_reg
-    `out_ext:;// out_ext
-    `out_id:;// out_id
-    `reg_const:;// reg_const
-    `reg_ext:;// reg_ext
-    `reg_id:;// reg_id
-    `const_reg:;// const_reg
-    `const_ext:; // const_ext
+        arga <= myregs[instructions[pc][19:10]];
+        argb <= myregs[instructions[pc][9:0]];
+      end // regreg
+        
+    `ext_ext: begin
+         case(instructions[pc][1:0])
+                 `ex_cw: arga=cw;
+                 `ex_cs: arga=cs;
+                 `ex_cn: arga=cn;             
+                 `ex_ce: arga=ce;
+                 endcase
+         case(instructions[pc][1:0])
+                 `ex_cw: argb=cw;
+                 `ex_cs: argb=cs;
+                 `ex_cn: argb=cn;             
+                 `ex_ce: argb=ce;
+                  endcase             
+     end// extext    
+    
+    
+    `id_id: begin
+         if(instructions[pc][11:10]== 2'b00 ) begin  
+            arga = x;
+            end    
+          else begin 
+            arga = y;
+           end     
+              
+           if(instructions[pc][1:0]== 2'b00 )begin
+                  argb = x;
+                  end
+           else begin
+                argb = y; 
+                end
+                
+           end//idid
+               
+
+        
+    `out_const: begin
+           arga <=outC;//the out
+           argb <=instructions[pc][9:0] ; //the const
+       end// out_const
+       
+       
+    `out_reg: begin
+            arga <=outC;//the out
+            argb <=myregs[instructions[pc][9:0]] ; //the const
+      end// out_reg
+      
+    `out_ext: begin
+                arga <=outC;//the out
+                 case(instructions[pc][1:0])
+                    `ex_cw: argb=cw;
+                    `ex_cs: argb=cs;
+                    `ex_cn: argb=cn;             
+                    `ex_ce: argb=ce;
+                    endcase  
+    end// out_ext
+    
+    
+    `out_id: begin
+        arga <=outC;//the out
+          if(instructions[pc][1:0]== 2'b00 )begin
+                argb = x;
+                end
+          else begin
+                argb = y; 
+                end
+    end// out_id
+    
+    
+    `reg_const: begin
+            arga <= myregs[instructions[pc][19:10]];
+            argb <= instructions[pc][9:0];
+    end// reg_const
+    
+    `reg_ext: begin
+            arga <= myregs[instructions[pc][19:10]];
+            case(instructions[pc][1:0])
+                `ex_cw: argb=cw;
+                `ex_cs: argb=cs;
+                `ex_cn: argb=cn;             
+                `ex_ce: argb=ce;
+                endcase       
+    end// reg_ext
+    
+    
+    `reg_id: begin
+          arga <= myregs[instructions[pc][19:10]];
+          if(instructions[pc][1:0]== 2'b00 )begin
+                 argb = x;
+                 end
+           else begin
+                 argb = y; 
+                 end
+      end// reg_id
+    
+    `const_reg: begin
+         arga <= instructions[pc][19:10];
+         argb <= myregs[instructions[pc][9:0]];
+    end// const_reg
+    
+    
+    `const_ext: begin 
+         arga <= instructions[pc][20:11];
+             case(instructions[pc][1:0])
+                 `ex_cw: argb=cw;
+                 `ex_cs: argb=cs;
+                 `ex_cn: argb=cn;             
+                 `ex_ce: argb=ce;
+                 endcase  
+     end//const_ext
+    
     `const_id:; // const_id
     `ext_reg:; // ext_reg
     `ext_const:; // ext_const
     `ext_id:; // ext_id
-    `id_reg:; // id_reg
-    `id_const:; // id_const
-    `id_ext:; // id_ext
+    
+    `id_reg:begin
+                if(instructions[pc][11:10]== 2'b00 ) begin  
+                    arga = x;
+                    end    
+                else begin 
+                    arga = y;
+                    end                     
+               argb <= myregs[instructions[pc][9:0]];          
+         end // id_reg
+    
+    `id_const:begin
+            if(instructions[pc][11:10]== 2'b00 ) begin  
+                arga = x;
+                end    
+            else begin 
+                arga = y;
+                end   
+                
+           argb <= instructions[pc][9:0];          
+     end // id_const
+     
+    `id_ext:begin
+        if(instructions[pc][11:10]== 2'b00 ) begin  
+            arga = x;
+            end    
+        else begin 
+            arga = y;
+            end   
+           
+           case(instructions[pc][1:0])
+                  `ex_cw: argb=cw;
+                  `ex_cs: argb=cs;
+                  `ex_cn: argb=cn;             
+                  `ex_ce: argb=ce;
+                  endcase  
+    end// id_ext
+    
     endcase
+    
+    
     case(opcode)
     `add: ;// the add
     `mull: ;// the mull

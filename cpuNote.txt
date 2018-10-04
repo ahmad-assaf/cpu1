@@ -1,5 +1,6 @@
+
 // starting our cpu unit	
-module cpu1(xlk,x,y,cw,cs,cn,ce,outC);
+module cpu1(clk,x,y,cw,cs,cn,ce,outC);
 input clk,
 input[31:0] cw,cs,cn,ce;
 input[4:0] x,y;

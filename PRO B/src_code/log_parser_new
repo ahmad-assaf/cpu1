@@ -1,0 +1,57 @@
+#!/usr/bin/perl -w
+
+`./log_parser_aux $ARGV[0]`;
+
+require kernel_graph;
+our $graph=$kernel_graph::graph;
+my @tokens;
+my $clock=0;
+my $parsed =$ARGV[0]."_parsed";
+open(my $fh, '>', $parsed) or die "Could not open file '$parsed' $!";
+my $BB=0, $prev_BB = 0,$curr_BB=0;
+my $ctrl=0;
+my $input_token = (${$graph->{0}}[0] << 3) | (${$graph->{0}}[1] << 8) | 1;
+print $fh "0\n$input_token\n";
+while(<>){
+	$prev_BB = $BB;
+	$input_token = 0;
+	@tokens = split /\s+/;
+	if ($tokens[0] =~ "clock" && ($tokens[1] eq '=')) {
+		if($clock == 1) {
+			print $fh "$input_token\n";
+		}
+		$clock =1;
+		next;
+	}
+	elsif	($tokens[0] =~ "SET_COND_") {	
+
+		my @token_0 = (split /_/, $tokens[0]);
+		$BB = $token_0[2];
+		$input_token = ($tokens[-1] << 13) | (1 << 2);
+		if ($token_0[-2] eq "IF"){
+			$ctrl = $token_0[-1];
+		}
+		elsif ($BB == ${$graph->{$curr_BB}}[0]){
+			$ctrl = 0;
+		}
+		else {
+			$ctrl = 1;
+		}		
+		$input_token = $input_token |  ($ctrl << 1)
+	}
+	elsif ($tokens[0] eq "BB"){
+		$input_token =  (${$graph->{$tokens[4]}}[0] << 3) | (${$graph->{$tokens[4]}}[1] << 8) | 1;
+		$curr_BB= $tokens[4];
+		
+	}
+	else {
+		next;
+	}
+
+	print $fh "$input_token\n";
+	$clock = 0;
+	
+}
+
+close $fh;
+
