@@ -26,13 +26,34 @@ module cpu1(
     input [31:0] cn,
     input [31:0] ce,
     output [31:0] outC,
-    input [0:0] clk,
+    input clk,
     input [3:0] x,
     input [3:0] y
     );
     
-    reg[4:0] opcode,mode;
+    wire[31:0] cw,cn,cs,ce;
+    reg [31:0] outC;
+    
+    reg[3:0] opcode;
+    reg[4:0]mode;
     reg[9:0] rega,regb;
+    reg [29:0] instructions[100:0];
+    integer i,pc=0;
+    initial
+    begin
+        $readmemb("E:\\test\\testb.txt",instructions);
+        for(i=0 ; i < 30 ; i=i+1)
+        begin
+        $display("%b",instructions[i]);
+        end
+        $finish;
+    end
+    opcode <= instructions[pc][29:26];
+    
+    mode<=instructions[pc][25:21];
+    
+   // mode <= {ins[0],ins[1],ins[2],ins[3]};
+    
     case(mode)
     5'b00000:;// conscons
     5'b00001:;// regreg
