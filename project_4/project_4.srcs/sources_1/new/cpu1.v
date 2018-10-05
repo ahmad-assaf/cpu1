@@ -27,12 +27,13 @@ module cpu1(
     input [31:0] ce,
     output [31:0] outC,
     input clk,
+    input enable,
     input [3:0] x,
     input [3:0] y
     );
     
     wire[31:0] cw,cn,cs,ce;
-    wire clk;
+    wire clk,enable;
     wire[3:0] x,y;
     reg [31:0] outC;
     reg [31:0] result;
@@ -40,7 +41,7 @@ module cpu1(
     reg[3:0] opcode,dest;
     reg[4:0]mode;
     reg[9:0] arga,argb;
-    reg [31:0] instructions[100:0];
+    reg [31:0] instructions[100:0];//opcode-Mode-arga-argb-dest
     integer i,pc=0;
     
     `define const_const 5'b00000//conscons
@@ -90,7 +91,7 @@ module cpu1(
     `define RG13 4'b1101
     `define RG14 4'b1110
     `define RGout 4'b1111
-    
+
     //defines
     initial
     begin
@@ -106,9 +107,11 @@ module cpu1(
     end
     
 
-    
+ 
    // mode <= {ins[0],ins[1],ins[2],ins[3]};
     always @(posedge clk) begin
+         if(enable==1)
+         begin  
     case(mode)
     `const_const: begin
         arga <= instructions[pc][23:14];
@@ -342,4 +345,5 @@ module cpu1(
         
         endcase
     end
+end
 endmodule
