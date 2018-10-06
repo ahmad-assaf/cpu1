@@ -6,12 +6,15 @@ This means code written to parse this file will need to be revisited each subseq
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <application name="pa" timeStamp="Sat Oct  6 12:16:08 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="bc6f9940b1fe4f28801787b281242844" type="ProjectID"/>
 <property name="ProjectIteration" value="2" type="ProjectIteration"/>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 9f234ae... testbench
 =======
 >>>>>>> parent of 9f234ae... testbench
 =======
@@ -27,6 +30,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 9f234ae... testbench
+=======
 >>>>>>> parent of 9f234ae... testbench
 =======
 >>>>>>> parent of 9f234ae... testbench
@@ -42,6 +48,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,6 +85,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="TclMode" value="5" type="TclMode"/>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 9f234ae... testbench
 =======
 >>>>>>> parent of 9f234ae... testbench
 =======
@@ -143,6 +152,9 @@ This means code written to parse this file will need to be revisited each subseq
 >>>>>>> 3c36ee7f5226bcf772cfcd8f696b8694ed7d2777
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 9f234ae... testbench
+=======
 >>>>>>> parent of 9f234ae... testbench
 =======
 >>>>>>> parent of 9f234ae... testbench

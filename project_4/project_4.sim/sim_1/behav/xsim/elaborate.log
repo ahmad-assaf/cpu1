@@ -3,6 +3,7 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 95e0b1df1cca4f208ec5bbce86c54075 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_Testbench_behav xil_defaultlib.cpu_Testbench xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
@@ -10,6 +11,8 @@ WARNING: [VRFC 10-278] actual bit length 63 differs from formal bit length 32 fo
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
 =======
+=======
+>>>>>>> parent of 9f234ae... testbench
 =======
 >>>>>>> parent of 9f234ae... testbench
 =======
@@ -26,6 +29,9 @@ Compiling module xil_defaultlib.glbl
 Built simulation snapshot cpu1_behav
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 9f234ae... testbench
+=======
 >>>>>>> parent of 9f234ae... testbench
 =======
 >>>>>>> parent of 9f234ae... testbench

@@ -103,6 +103,9 @@ module cpu1(
         for(i=0 ; i < 100 ; i=i+1)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 9f234ae... testbench
+=======
 >>>>>>> parent of 9f234ae... testbench
 =======
 >>>>>>> parent of 9f234ae... testbench

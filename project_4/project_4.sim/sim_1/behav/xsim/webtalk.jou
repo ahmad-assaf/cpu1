@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Start of session at: Sat Oct  6 11:38:50 2018
 # Process ID: 10572
 # Current directory: C:/Users/USER/Desktop/cgj/cpu1/project_4/project_4.sim/sim_1/behav/xsim
@@ -14,6 +15,8 @@
 #-----------------------------------------------------------
 source C:/Users/USER/Desktop/cgj/cpu1/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/cpu_Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
 =======
+=======
+>>>>>>> parent of 9f234ae... testbench
 =======
 >>>>>>> parent of 9f234ae... testbench
 =======
@@ -28,6 +31,9 @@ source C:/Users/USER/Desktop/cgj/cpu1/project_4/project_4.sim/sim_1/behav/xsim/x
 source C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/cpu1_behav/webtalk/xsim_webtalk.tcl -notrace
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 9f234ae... testbench
+=======
 >>>>>>> parent of 9f234ae... testbench
 =======
 >>>>>>> parent of 9f234ae... testbench
