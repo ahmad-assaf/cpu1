@@ -1,9 +1,9 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 95e0b1df1cca4f208ec5bbce86c54075 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_Testbench_behav xil_defaultlib.cpu_Testbench xil_defaultlib.glbl -log elaborate.log 
+Running: E:/Xilinx2/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 95e0b1df1cca4f208ec5bbce86c54075 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_Testbench_behav xil_defaultlib.cpu_Testbench xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 31 differs from formal bit length 32 for port cw [C:/Users/USER/Desktop/cpu1/project_4/project_4.srcs/sim_1/new/cpu_Testbench.v:36]
+WARNING: [VRFC 10-278] actual bit length 31 differs from formal bit length 32 for port cw [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sim_1/new/cpu_Testbench.v:36]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
