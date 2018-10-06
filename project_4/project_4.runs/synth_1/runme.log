@@ -1,0 +1,667 @@
+
+*** Running vivado
+    with args -log cpu1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu1.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source cpu1.tcl -notrace
+Command: synth_design -top cpu1 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1328 
+WARNING: [Synth 8-2611] redeclaration of ansi port cw is not allowed [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:35]
+WARNING: [Synth 8-2611] redeclaration of ansi port cn is not allowed [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:35]
+WARNING: [Synth 8-2611] redeclaration of ansi port cs is not allowed [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:35]
+WARNING: [Synth 8-2611] redeclaration of ansi port ce is not allowed [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:35]
+WARNING: [Synth 8-2611] redeclaration of ansi port clk is not allowed [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:36]
+WARNING: [Synth 8-2611] redeclaration of ansi port enable is not allowed [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:36]
+WARNING: [Synth 8-2611] redeclaration of ansi port x is not allowed [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:37]
+WARNING: [Synth 8-2611] redeclaration of ansi port y is not allowed [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:37]
+WARNING: [Synth 8-2611] redeclaration of ansi port outC is not allowed [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:38]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 369.699 ; gain = 111.262
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cpu1' [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:23]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'testb.txt'; please make sure the file is added to project and has read permission, ignoring [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:98]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:104]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:105]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:106]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:115]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:320]
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+WARNING: [Synth 8-3848] Net instructions in module/entity cpu1 does not have driver. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:44]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'cpu1' (1#1) [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:23]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[31]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[30]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[29]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[28]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[27]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[26]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[25]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[24]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[23]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[22]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[21]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[20]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[19]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[18]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[17]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[16]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[15]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[14]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[13]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[12]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[11]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[10]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[31]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[30]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[29]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[28]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[27]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[26]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[25]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[24]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[23]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[22]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[21]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[20]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[19]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[18]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[17]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[16]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[15]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[14]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[13]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[12]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[11]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cs[10]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[31]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[30]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[29]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[28]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[27]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[26]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[25]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[24]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[23]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[22]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[21]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[20]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[19]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[18]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[17]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[16]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[15]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[14]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[13]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[12]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[11]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cn[10]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[31]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[30]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[29]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[28]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[27]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[26]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[25]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[24]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[23]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[22]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[21]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[20]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[19]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[18]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[17]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[16]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[15]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[14]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[13]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[12]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[11]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port ce[10]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 405.324 ; gain = 146.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 405.324 ; gain = 146.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 405.324 ; gain = 146.887
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[0]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[1]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[2]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[3]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[4]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[5]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[6]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[7]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[8]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[9]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[10]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[11]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[12]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[13]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+WARNING: [Synth 8-3936] Found unconnected internal register 'myregs_reg[14]' and it is trimmed from '32' to '10' bits. [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:122]
+INFO: [Synth 8-5544] ROM "result" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 405.324 ; gain = 146.887
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               10 Bit    Registers := 18    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	  21 Input     10 Bit        Muxes := 4     
+	  15 Input     10 Bit        Muxes := 2     
+	   4 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  16 Input      1 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	  21 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module cpu1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               10 Bit    Registers := 18    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	  21 Input     10 Bit        Muxes := 4     
+	  15 Input     10 Bit        Muxes := 2     
+	   4 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  16 Input      1 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	  21 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'arga_reg[9:0]' into 'arga_reg[9:0]' [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:117]
+WARNING: [Synth 8-6014] Unused sequential element arga_reg was removed.  [C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.srcs/sources_1/new/cpu1.v:117]
+DSP Report: Generating DSP result0, operation Mode is: A2*B.
+DSP Report: register arga_reg is absorbed into DSP result0.
+DSP Report: operator result0 is absorbed into DSP result0.
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[31]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[30]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[29]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[28]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[27]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[26]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[25]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[24]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[23]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[22]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[21]
+WARNING: [Synth 8-3331] design cpu1 has unconnected port cw[20]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'myregs_reg[11][0]' (FDE) to 'myregs_reg[13][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[10][0]' (FDE) to 'myregs_reg[13][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[9][0]' (FDE) to 'myregs_reg[13][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[8][0]' (FDE) to 'myregs_reg[13][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[14][0]' (FDE) to 'myregs_reg[13][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[13][0]' (FDE) to 'myregs_reg[7][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[12][0]' (FDE) to 'myregs_reg[7][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[7][0]' (FDE) to 'myregs_reg[5][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[6][0]' (FDE) to 'myregs_reg[5][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[5][0]' (FDE) to 'myregs_reg[3][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[4][0]' (FDE) to 'myregs_reg[3][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[3][0]' (FDE) to 'myregs_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[2][0]' (FDE) to 'myregs_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[1][0]' (FDE) to 'outC_reg[0]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[11][1]' (FDE) to 'myregs_reg[13][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[10][1]' (FDE) to 'myregs_reg[13][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[9][1]' (FDE) to 'myregs_reg[13][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[8][1]' (FDE) to 'myregs_reg[13][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[14][1]' (FDE) to 'myregs_reg[13][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[13][1]' (FDE) to 'myregs_reg[7][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[12][1]' (FDE) to 'myregs_reg[7][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[7][1]' (FDE) to 'myregs_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[6][1]' (FDE) to 'myregs_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[5][1]' (FDE) to 'myregs_reg[3][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[4][1]' (FDE) to 'myregs_reg[3][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[3][1]' (FDE) to 'myregs_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[2][1]' (FDE) to 'myregs_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[1][1]' (FDE) to 'outC_reg[1]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[11][2]' (FDE) to 'myregs_reg[13][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[10][2]' (FDE) to 'myregs_reg[13][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[9][2]' (FDE) to 'myregs_reg[13][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[8][2]' (FDE) to 'myregs_reg[13][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[14][2]' (FDE) to 'myregs_reg[13][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[13][2]' (FDE) to 'myregs_reg[7][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[12][2]' (FDE) to 'myregs_reg[7][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[7][2]' (FDE) to 'myregs_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[6][2]' (FDE) to 'myregs_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[5][2]' (FDE) to 'myregs_reg[3][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[4][2]' (FDE) to 'myregs_reg[3][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[3][2]' (FDE) to 'myregs_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[2][2]' (FDE) to 'myregs_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[1][2]' (FDE) to 'outC_reg[2]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[11][3]' (FDE) to 'myregs_reg[13][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[10][3]' (FDE) to 'myregs_reg[13][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[9][3]' (FDE) to 'myregs_reg[13][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[8][3]' (FDE) to 'myregs_reg[13][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[14][3]' (FDE) to 'myregs_reg[13][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[13][3]' (FDE) to 'myregs_reg[7][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[12][3]' (FDE) to 'myregs_reg[7][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[7][3]' (FDE) to 'myregs_reg[5][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[6][3]' (FDE) to 'myregs_reg[5][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[5][3]' (FDE) to 'myregs_reg[3][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[4][3]' (FDE) to 'myregs_reg[3][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[3][3]' (FDE) to 'myregs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[2][3]' (FDE) to 'myregs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[1][3]' (FDE) to 'outC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[11][4]' (FDE) to 'myregs_reg[13][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[10][4]' (FDE) to 'myregs_reg[13][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[9][4]' (FDE) to 'myregs_reg[13][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[8][4]' (FDE) to 'myregs_reg[13][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[14][4]' (FDE) to 'myregs_reg[13][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[13][4]' (FDE) to 'myregs_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[12][4]' (FDE) to 'myregs_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[7][4]' (FDE) to 'myregs_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[6][4]' (FDE) to 'myregs_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[5][4]' (FDE) to 'myregs_reg[3][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[4][4]' (FDE) to 'myregs_reg[3][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[3][4]' (FDE) to 'myregs_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[2][4]' (FDE) to 'myregs_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[1][4]' (FDE) to 'outC_reg[4]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[11][5]' (FDE) to 'myregs_reg[13][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[10][5]' (FDE) to 'myregs_reg[13][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[9][5]' (FDE) to 'myregs_reg[13][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[8][5]' (FDE) to 'myregs_reg[13][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[14][5]' (FDE) to 'myregs_reg[13][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[13][5]' (FDE) to 'myregs_reg[7][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[12][5]' (FDE) to 'myregs_reg[7][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[7][5]' (FDE) to 'myregs_reg[5][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[6][5]' (FDE) to 'myregs_reg[5][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[5][5]' (FDE) to 'myregs_reg[3][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[4][5]' (FDE) to 'myregs_reg[3][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[3][5]' (FDE) to 'myregs_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[2][5]' (FDE) to 'myregs_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[1][5]' (FDE) to 'outC_reg[5]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[11][6]' (FDE) to 'myregs_reg[13][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[10][6]' (FDE) to 'myregs_reg[13][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[9][6]' (FDE) to 'myregs_reg[13][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[8][6]' (FDE) to 'myregs_reg[13][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[14][6]' (FDE) to 'myregs_reg[13][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[13][6]' (FDE) to 'myregs_reg[7][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[12][6]' (FDE) to 'myregs_reg[7][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[7][6]' (FDE) to 'myregs_reg[5][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[6][6]' (FDE) to 'myregs_reg[5][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[5][6]' (FDE) to 'myregs_reg[3][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[4][6]' (FDE) to 'myregs_reg[3][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[3][6]' (FDE) to 'myregs_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[2][6]' (FDE) to 'myregs_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[1][6]' (FDE) to 'outC_reg[6]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[11][7]' (FDE) to 'myregs_reg[13][7]'
+INFO: [Synth 8-3886] merging instance 'myregs_reg[10][7]' (FDE) to 'myregs_reg[13][7]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\result_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\outC_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\outC_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\outC_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\outC_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\outC_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\outC_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\outC_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\outC_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\outC_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\outC_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\outC_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\outC_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (myregs_reg[0][9]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (myregs_reg[0][8]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (myregs_reg[0][7]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (myregs_reg[0][6]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (myregs_reg[0][5]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (myregs_reg[0][4]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (myregs_reg[0][3]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (myregs_reg[0][2]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (myregs_reg[0][1]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (myregs_reg[0][0]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (argb_reg[9]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (argb_reg[8]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (argb_reg[7]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (argb_reg[6]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (argb_reg[5]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (argb_reg[4]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (argb_reg[3]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (argb_reg[2]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (argb_reg[1]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (argb_reg[0]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (result_reg[10]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (result_reg[9]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (result_reg[8]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (result_reg[7]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (result_reg[6]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (result_reg[5]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (result_reg[4]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (result_reg[3]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (result_reg[2]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (result_reg[1]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (result_reg[0]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (outC_reg[31]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (outC_reg[10]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (outC_reg[0]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (outC_reg[1]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (outC_reg[2]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (outC_reg[3]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (outC_reg[4]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (outC_reg[5]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (outC_reg[6]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (outC_reg[7]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (outC_reg[8]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (outC_reg[9]) is unused and will be removed from module cpu1.
+WARNING: [Synth 8-3332] Sequential element (result_reg[31]) is unused and will be removed from module cpu1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 551.285 ; gain = 292.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|cpu1        | A2*B        | 10     | 10     | -      | -      | 20     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 551.285 ; gain = 292.848
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 551.285 ; gain = 292.848
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 551.285 ; gain = 292.848
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 551.285 ; gain = 292.848
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 551.285 ; gain = 292.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 551.285 ; gain = 292.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 551.285 ; gain = 292.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 551.285 ; gain = 292.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |    32|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    32|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 551.285 ; gain = 292.848
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 352 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 551.285 ; gain = 292.848
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 551.285 ; gain = 292.848
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+129 Infos, 272 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 658.004 ; gain = 412.574
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.runs/synth_1/cpu1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cpu1_utilization_synth.rpt -pb cpu1_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 658.004 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Oct  6 09:47:52 2018...
