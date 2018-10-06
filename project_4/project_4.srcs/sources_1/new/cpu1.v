@@ -96,11 +96,10 @@ module cpu1(
     initial
     begin
         $readmemb("E:\\test\\testb.txt",instructions);
-        for(i=0 ; i < 100 ; i=i+1)
+    /*    for(i=0 ; i < 100 ; i=i+1)
         begin
         $display("%b",instructions[i]);
-        end
-        $finish;
+        end*/
         opcode <= instructions[pc][31:29];
         mode <= instructions[pc][28:24];
         dest <= instructions[pc][3:0] ;// 4 bits for the destination
@@ -110,7 +109,7 @@ module cpu1(
  
    // mode <= {ins[0],ins[1],ins[2],ins[3]};
     always @(posedge clk) begin
-         if(enable==1)
+    if(enable == 1)
          begin  
     case(mode)
     `const_const: begin
@@ -344,6 +343,7 @@ module cpu1(
         
         
         endcase
+        pc=pc+1;
     end
 end
 endmodule
