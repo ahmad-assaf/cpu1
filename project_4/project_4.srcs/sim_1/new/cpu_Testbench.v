@@ -49,6 +49,10 @@ module cpu_Testbench(
      initial 
      #10 $finish; 
        
+       always@(enable==0)begin
+       #5
+       enable=1;
+       end
      //Rest of testbench code after this line 
      
 endmodule
