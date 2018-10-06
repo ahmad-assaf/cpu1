@@ -95,7 +95,9 @@ module cpu1(
     //defines
     initial
     begin
-        $readmemb("E:\\test\\testb.txt",instructions);
+     //   $readmemb("D:\\test\\testb.txt",instructions);
+          $readmemb("D:\test\testb.txt",instructions,0,31);
+
     /*    for(i=0 ; i < 100 ; i=i+1)
         begin
         $display("%b",instructions[i]);
