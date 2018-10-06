@@ -49,6 +49,7 @@ module cpu_Testbench(
      initial 
      #10 $finish; 
 <<<<<<< HEAD
+<<<<<<< HEAD
       
       
        always@(enable==0)begin
@@ -61,6 +62,9 @@ module cpu_Testbench(
       #1 
       enable =1;
       end
+=======
+       
+>>>>>>> parent of 9f234ae... testbench
 =======
        
 >>>>>>> parent of 9f234ae... testbench

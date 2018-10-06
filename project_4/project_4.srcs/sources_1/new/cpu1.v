@@ -101,6 +101,9 @@ module cpu1(
 =======
         $readmemb("E:\\test\\testb.txt",instructions);
         for(i=0 ; i < 100 ; i=i+1)
+<<<<<<< HEAD
+>>>>>>> parent of 9f234ae... testbench
+=======
 >>>>>>> parent of 9f234ae... testbench
         begin
         $display("%b",instructions[i]);
