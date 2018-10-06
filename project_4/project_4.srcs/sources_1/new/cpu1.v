@@ -95,11 +95,17 @@ module cpu1(
     //defines
     initial
     begin
+<<<<<<< HEAD
         $readmemb("D:\\test\\testb.txt",instructions);
        /* for(i=0 ; i < 100 ; i=i+1)
+=======
+        $readmemb("E:\\test\\testb.txt",instructions);
+        for(i=0 ; i < 100 ; i=i+1)
+>>>>>>> parent of 9f234ae... testbench
         begin
         $display("%b",instructions[i]);
-        end*/
+        end
+        $finish;
         opcode <= instructions[pc][31:29];
         mode <= instructions[pc][28:24];
         dest <= instructions[pc][3:0] ;// 4 bits for the destination
