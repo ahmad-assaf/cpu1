@@ -19,13 +19,13 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-`define REG_SIZE  5'b11111
+`define REG_SIZE  6'b100000
 module cpu_Testbench(
 
     );
     
     reg clk, reset, enable; 
-    wire [`REG_SIZE-1:0] C=0; 
+    wire [`REG_SIZE-1:0] C; 
     wire [`REG_SIZE-1:0] CE=0;
     wire [`REG_SIZE-1:0] CW=0;
     wire [`REG_SIZE-1:0] CN=0;
@@ -49,11 +49,11 @@ module cpu_Testbench(
      end 
        
        
-      always@ (enable==0)
-      begin
-      #1 
-      enable =1;
-      end
+     // always@ (enable==0)
+   //   begin
+    //  #1 
+    //  enable =1;
+   //   end
      //Rest of testbench code after this line 
      
 endmodule
