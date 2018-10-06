@@ -4,6 +4,7 @@
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Start of session at: Sat Oct  6 11:38:50 2018
 # Process ID: 10572
 # Current directory: C:/Users/USER/Desktop/cgj/cpu1/project_4/project_4.sim/sim_1/behav/xsim
@@ -18,6 +19,8 @@ INFO: [Common 17-206] Exiting Webtalk at Sat Oct  6 11:39:00 2018...
 =======
 =======
 >>>>>>> parent of 9f234ae... testbench
+=======
+>>>>>>> parent of 9f234ae... testbench
 # Start of session at: Thu Oct  4 22:33:59 2018
 # Process ID: 5256
 # Current directory: C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.sim/sim_1/behav/xsim
@@ -30,6 +33,9 @@ INFO: [Common 17-186] 'C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.sim
 webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 55.758 ; gain = 1.570
 INFO: [Common 17-206] Exiting Webtalk at Thu Oct  4 22:34:06 2018...
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 9f234ae... testbench
+=======
 >>>>>>> parent of 9f234ae... testbench
 =======
 >>>>>>> parent of 9f234ae... testbench

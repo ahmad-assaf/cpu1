@@ -33,7 +33,11 @@
     <Option Name="DSANumComputeUnits" Val="60"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Option Name="WTXSimLaunchSim" Val="8"/>
+=======
+    <Option Name="WTXSimLaunchSim" Val="2"/>
+>>>>>>> parent of 9f234ae... testbench
 =======
     <Option Name="WTXSimLaunchSim" Val="2"/>
 >>>>>>> parent of 9f234ae... testbench
