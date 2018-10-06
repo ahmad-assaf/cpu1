@@ -95,8 +95,8 @@ module cpu1(
     //defines
     initial
     begin
-        $readmemb("E:\\test\\testb.txt",instructions);
-    /*    for(i=0 ; i < 100 ; i=i+1)
+        $readmemb("D:\\test\\testb.txt",instructions);
+       /* for(i=0 ; i < 100 ; i=i+1)
         begin
         $display("%b",instructions[i]);
         end*/
@@ -109,7 +109,7 @@ module cpu1(
  
    // mode <= {ins[0],ins[1],ins[2],ins[3]};
     always @(posedge clk) begin
-    if(enable == 1)
+         if(enable==1)
          begin  
     case(mode)
     `const_const: begin
@@ -343,7 +343,6 @@ module cpu1(
         
         
         endcase
-        pc=pc+1;
     end
 end
 endmodule

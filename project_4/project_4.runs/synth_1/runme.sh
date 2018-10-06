@@ -11,15 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-<<<<<<< HEAD
   PATH=C:/Xilinx/SDK/2018.2/bin;C:/Xilinx/Vivado/2018.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2018.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2018.2/bin
 else
   PATH=C:/Xilinx/SDK/2018.2/bin;C:/Xilinx/Vivado/2018.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2018.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2018.2/bin:$PATH
-=======
-  PATH=E:/Xilinx2/SDK/2018.2/bin;E:/Xilinx2/Vivado/2018.2/ids_lite/ISE/bin/nt64;E:/Xilinx2/Vivado/2018.2/ids_lite/ISE/lib/nt64:E:/Xilinx2/Vivado/2018.2/bin
-else
-  PATH=E:/Xilinx2/SDK/2018.2/bin;E:/Xilinx2/Vivado/2018.2/ids_lite/ISE/bin/nt64;E:/Xilinx2/Vivado/2018.2/ids_lite/ISE/lib/nt64:E:/Xilinx2/Vivado/2018.2/bin:$PATH
->>>>>>> 9f234ae7243396eb0e45841a488f94b5c496e2b7
 fi
 export PATH
 
@@ -30,11 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-<<<<<<< HEAD
 HD_PWD='C:/Users/USER/Desktop/cgj/cpu1/project_4/project_4.runs/synth_1'
-=======
-HD_PWD='C:/Users/Ibrahem/Desktop/hardware/project_4/project_4.runs/synth_1'
->>>>>>> 9f234ae7243396eb0e45841a488f94b5c496e2b7
 cd "$HD_PWD"
 
 HD_LOG=runme.log
