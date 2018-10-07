@@ -34,6 +34,48 @@ reg enable[N-1:0][N-1:0];
 reg clk, reset; 
 genvar X,Y; 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//update of wlr/wrl/wdu/wud 
+
+// left to right
+for (X=0; X < N-1; X=X+1) 
+begin 
+ for (Y=0; Y < N; Y=Y+1) 
+  begin  
+   assign WLR[X][Y]=outCs[X][Y];
+  end 
+end 
+
+// right to left
+for (X=0; X < N-1; X=X+1) 
+begin 
+ for (Y=0; Y < N; Y=Y+1) 
+  begin  
+   assign WRL[X][Y]=outCs[X+1][Y];
+  end 
+end 
+
+// up to down
+for (X=0; X < N; X=X+1) 
+begin 
+ for (Y=0; Y < N-1; Y=Y+1) 
+  begin  
+   assign WUD[X][Y]=outCs[X][Y];
+  end 
+end 
+
+// down to up
+for (X=0; X < N; X=X+1) 
+begin 
+ for (Y=0; Y < N-1; Y=Y+1) 
+  begin  
+   assign WDU[X][Y]=outCs[X][Y+1];
+  end 
+end 
+
+//end the update of wlr/wrl/wdu/wud
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 generate // middle proccesors 
