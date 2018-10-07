@@ -25,7 +25,7 @@ module cpu1(
     input [31:0] cs,
     input [31:0] cn,
     input [31:0] ce,
-    output [31:0] outC,
+    output reg [31:0] outC,
     input clk,
     input enable,
     input [3:0] x,
@@ -35,7 +35,7 @@ module cpu1(
     wire[31:0] cw,cn,cs,ce;
     wire clk,enable;
     wire[3:0] x,y;
-    reg [31:0] outC;
+    //reg [31:0] outC;
     reg [31:0] result;
     reg [31:0] myregs[14:0];//we can give 4 bits from the instuction for the destination so 15 regsedter and 1 outC
     reg[3:0] opcode,dest;
@@ -109,8 +109,8 @@ module cpu1(
  
    // mode <= {ins[0],ins[1],ins[2],ins[3]};
     always @(posedge clk) begin
-    if(enable == 1)
-         begin  
+         # x ;
+         # y ;
     case(mode)
     `const_const: begin
         arga <= instructions[pc][23:14];
@@ -323,7 +323,7 @@ module cpu1(
     `set: result <= arga;// the set
     endcase
     
-        case(dest)
+    case(dest)
         `RG0: myregs[0]= result;
         `RG1: myregs[1]= result;
         `RG2: myregs[2]= result;
@@ -339,11 +339,8 @@ module cpu1(
         `RG12: myregs[12]= result;
         `RG13: myregs[13]= result;
         `RG14: myregs[14]= result;
-        `RGout: outC= result;
-        
-        
+        `RGout: outC= result; 
         endcase
         pc=pc+1;
     end
-end
 endmodule
