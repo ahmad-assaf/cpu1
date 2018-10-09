@@ -24,6 +24,7 @@ module sysArray #(parameter N = 4) (inp,out);
 input inp; 
 output out; 
 wire [N-1:0] inp; 
+wire [N-1:0] out; 
 wire outCs [N-1:0][N-1:0]; 
 wire [31:0] WLR [N-2:0][N-1:0]; //left to right wires
 wire [31:0] WRL [N-2:0][N-1:0]; //right to left wires
@@ -32,34 +33,7 @@ wire [31:0] WDU [N-1:0] [N-2:0]; //down UP wires
 //reg enable[N-1:0][N-1:0];
 reg clk, reset; 
 genvar X,Y; 
-reg [N*(32)-1:0] mat1 [N-1:0];
-reg [N*(32)-1:0] mat2[N-1:0];
-reg [31:0] cwRegs[N-1:0];
-reg [31:0] cnRegs [N-1:0];
-reg[3:0] i,j;
 
-initial
-begin
-        $readmemb("E:\\test\\testb.txt",mat1);
-        $readmemb("E:\\test\\testb.txt",mat2);
-         for(i=0 ; i <N; i=i+1)
-               begin
-               cwRegs[i]<= mat1[i] [N*(32)-1:(N-1)*(32)-1];
-               cnRegs[i]<= mat2[i] [N*(32)-1:(N-1)*(32)-1];
-               end
-end
-always
-begin
-    for(j=0;j<N;j=j+1)
-    begin
-        for(i=0 ; i <N; i=i+1)
-              begin
-               cwRegs[i]<= mat1[i] [N*(32)-1:(N-1)*(32)-1];
-               cnRegs[i]<= mat2[i] [N*(32)-1:(N-1)*(32)-1];
-              end
-          #4;
-    end
-end
 
 
 

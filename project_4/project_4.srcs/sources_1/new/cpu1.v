@@ -27,13 +27,13 @@ module cpu1(
     input [31:0] ce,
     output reg [31:0] outC,
     input clk,
-    input [3:0] x,
-    input [3:0] y
+    input [6:0] x,
+    input [6:0] y
     );
     
     wire[31:0] cw,cn,cs,ce;
     wire clk;
-    wire[3:0] x,y;
+    wire[6:0] x,y;
     //reg [31:0] outC;
     reg [31:0] result;
     reg [31:0] myregs[14:0];//we can give 4 bits from the instuction for the destination so 15 regsedter and 1 outC
