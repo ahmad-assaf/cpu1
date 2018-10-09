@@ -33,7 +33,7 @@ module cpu_Testbench(
     
     reg[3:0] x=0,y=0;
     
-    cpu1 thispe(CW,CN,CS,CE,C,clk,enable,x,y);
+    cpu1 thispe(CW,CN,CS,CE,C,clk,x,y);
     
      initial begin
        clk = 0; 

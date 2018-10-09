@@ -27,13 +27,12 @@ module cpu1(
     input [31:0] ce,
     output reg [31:0] outC,
     input clk,
-    input enable,
     input [3:0] x,
     input [3:0] y
     );
     
     wire[31:0] cw,cn,cs,ce;
-    wire clk,enable;
+    wire clk;
     wire[3:0] x,y;
     //reg [31:0] outC;
     reg [31:0] result;
@@ -41,7 +40,7 @@ module cpu1(
     reg[3:0] opcode,dest;
     reg[4:0]mode;
     reg[9:0] arga,argb;
-    reg [31:0] instructions[100:0];//opcode-Mode-arga-argb-dest
+    reg [31:-30] instructions[100:0];//opcode-Mode-arga-argb-dest
     integer i,pc=0;
     
     `define const_const 5'b00000//conscons
@@ -95,11 +94,14 @@ module cpu1(
     //defines
     initial
     begin
+         # x ;
+         # y ;
         $readmemb("E:\\test\\testb.txt",instructions);
     /*    for(i=0 ; i < 100 ; i=i+1)
         begin
         $display("%b",instructions[i]);
         end*/
+        
         opcode <= instructions[pc][31:29];
         mode <= instructions[pc][28:24];
         dest <= instructions[pc][3:0] ;// 4 bits for the destination
@@ -109,8 +111,8 @@ module cpu1(
  
    // mode <= {ins[0],ins[1],ins[2],ins[3]};
     always @(posedge clk) begin
-         # x ;
-         # y ;
+    if(instructions[pc][-15+x]==1 & instructions[pc][-30+y]==1 )
+    begin
     case(mode)
     `const_const: begin
         arga <= instructions[pc][23:14];
@@ -320,27 +322,28 @@ module cpu1(
     `add: result <= arga+argb ;// the add
     `mull: result <= arga*argb;// the mull
     `sub: result <= arga-argb ;// the move
-    `set: result <= arga;// the set
+    `set:begin result <= arga;    outC<= arga;  end// the set
     endcase
     
     case(dest)
-        `RG0: myregs[0]= result;
-        `RG1: myregs[1]= result;
-        `RG2: myregs[2]= result;
-        `RG3: myregs[3]= result;
-        `RG4: myregs[4]= result;
-        `RG5: myregs[5]= result;
-        `RG6: myregs[6]= result;
-        `RG7: myregs[7]= result;
-        `RG8: myregs[8]= result;
-        `RG9: myregs[9]= result;
-        `RG10: myregs[10]= result;
-        `RG11: myregs[11]= result;
-        `RG12: myregs[12]= result;
-        `RG13: myregs[13]= result;
-        `RG14: myregs[14]= result;
-        `RGout: outC= result; 
+        `RG0: myregs[0]<= result;
+        `RG1: myregs[1]<= result;
+        `RG2: myregs[2]<= result;
+        `RG3: myregs[3]<= result;
+        `RG4: myregs[4]<= result;
+        `RG5: myregs[5]<= result;
+        `RG6: myregs[6]<= result;
+        `RG7: myregs[7]<= result;
+        `RG8: myregs[8]<= result;
+        `RG9: myregs[9]<= result;
+        `RG10: myregs[10]<= result;
+        `RG11: myregs[11]<= result;
+        `RG12: myregs[12]<= result;
+        `RG13: myregs[13]<= result;
+        `RG14: myregs[14]<= result;
+        `RGout: outC<= result; 
         endcase
-        pc=pc+1;
+        pc<=pc+1;
+    end
     end
 endmodule
