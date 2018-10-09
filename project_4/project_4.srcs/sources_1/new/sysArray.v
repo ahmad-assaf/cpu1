@@ -20,12 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module sysArray #(parameter N = 4) (inp,out); 
-input inp; 
+module sysArray #(parameter N = 4) (inp1,inp2,out); 
+input inp1,inp2; 
 output out; 
-wire [N-1:0] inp; 
-wire [N-1:0] out; 
-wire outCs [N-1:0][N-1:0]; 
+wire [31:0] inp1 [N-1:0];
+wire [31:0] inp2 [N-1:0]; 
+wire [31:0] out [N-1:0][N-1:0]; 
+wire [31:0] outCs [N-1:0][N-1:0]; 
 wire [31:0] WLR [N-2:0][N-1:0]; //left to right wires
 wire [31:0] WRL [N-2:0][N-1:0]; //right to left wires
 wire [31:0] WUD [N-1:0] [N-2:0]; //up down wires
@@ -54,7 +55,7 @@ endgenerate
 generate // left side between corners
 for (Y=1; Y < N-1; Y=Y+1) 
   begin  
-cpu1 plm(0            ,     WDU[0][Y]  ,    WUD[0][Y-1]           ,WRL[0][Y]   ,outCs[0][Y],clk,0,Y );
+cpu1 plm(inp1[Y]            ,     WDU[0][Y]  ,    WUD[0][Y-1]           ,WRL[0][Y]   ,outCs[0][Y],clk,0,Y );
 assign WUD[0][Y-1] = outCs[0][Y-1];
 assign WRL[0][Y] = outCs[1][Y];
 assign WDU[0][Y] = outCs[0][Y+1];
@@ -84,7 +85,7 @@ endgenerate
 generate //upper side between corners
 for (X=1; X < N-1; X=X+1) 
 begin 
-cpu1 pum( WLR[X-1][0]            ,    WDU[X][0]   ,    0    , WRL[X][0]         ,outCs[X][0],clk,X,0 );
+cpu1 pum( WLR[X-1][0]            ,    WDU[X][0]   ,    inp2[X]    , WRL[X][0]         ,outCs[X][0],clk,X,0 );
 assign WDU[X][0] = outCs[X][1];
 assign WLR[X-1][0] = outCs[X-1][0];
 assign WRL[X][0] = outCs[X+1][0];
@@ -93,14 +94,14 @@ endgenerate
 
 // the up left angel
 generate
-cpu1 pul(0            ,     WDU[0][0]  ,    0           ,WRL[0][0]   ,outCs[0][0],clk,0,0);
+cpu1 pul(inp1[0]            ,     WDU[0][0]  ,    inp2[0]           ,WRL[0][0]   ,outCs[0][0],clk,0,0);
 assign WDU[0][0] = outCs[0][1];
 assign WRL[0][0] = outCs[1][0];
 endgenerate
 
 // the up right angel
 generate
-cpu1 pur(WLR[N-2][0],        WDU[N-1][0] ,    0             ,0         ,outCs[N-1][0],clk,N-1,0);
+cpu1 pur(WLR[N-2][0],        WDU[N-1][0] ,    inp2[N-1]             ,0         ,outCs[N-1][0],clk,N-1,0);
 assign WDU[N-1][0] = outCs[N-1][1];
 assign WLR[N-2][0] = outCs[N-2][0];
 endgenerate
@@ -114,7 +115,7 @@ endgenerate
 
 // the down left angel
 generate
-cpu1 pdl(0             ,      0       ,WUD[0][N-2]   ,  WRL[0][N-1]  ,outCs[0][N-1],clk,0,N-1);
+cpu1 pdl(inp1[N-1]            ,      0       ,WUD[0][N-2]   ,  WRL[0][N-1]  ,outCs[0][N-1],clk,0,N-1);
 assign WUD[0][N-2] = outCs[0][N-2];
 assign WRL[0][N-1] = outCs[1][N-1];
 endgenerate 

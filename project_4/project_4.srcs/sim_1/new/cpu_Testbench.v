@@ -26,10 +26,10 @@ module cpu_Testbench(
     
     reg clk, reset, enable; 
     wire [`REG_SIZE-1:0] C; 
-    wire [`REG_SIZE-1:0] CE=0;
-    wire [`REG_SIZE-1:0] CW=0;
-    wire [`REG_SIZE-1:0] CN=0;
-    wire [`REG_SIZE-1:0] CS=0;
+    wire [`REG_SIZE-1:0] CE;
+    wire [`REG_SIZE-1:0] CW;
+    wire [`REG_SIZE-1:0] CN;
+    wire [`REG_SIZE-1:0] CS;
     
     reg[3:0] x=0,y=0;
     

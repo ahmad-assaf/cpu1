@@ -24,20 +24,20 @@ module sysTest#(parameter N = 4)(
 
     );
     
-    reg [N*(32)-1:0] mat1 [N-1:0];
-    reg [N*(32)-1:0] mat2[N-1:0];
+    reg [31:0] mat1 [2*N-2:0][N-1:0];
+    reg [31:0] mat2 [N-1:0][2*N-2:0];
     reg [31:0] cwRegs[N-1:0];
     reg [31:0] cnRegs [N-1:0];
-    reg[3:0] i,j;
+    reg[6:0] i,j;
     
     initial
     begin
             $readmemb("E:\\test\\testb.txt",mat1);
             $readmemb("E:\\test\\testb.txt",mat2);
-             for(i=0 ; i <N; i=i+1)
+             for(i=0 ; i <N; i=i+1)                                             // not sure
                    begin
-                   cwRegs[i]<= mat1[i] [N*(32)-1:(N-1)*(32)-1];
-                   cnRegs[i]<= mat2[i] [N*(32)-1:(N-1)*(32)-1];
+                   cwRegs[i]<= mat1[i][0];
+                   cnRegs[i]<= mat2[0][i];
                    end
     end
     always
@@ -46,8 +46,8 @@ module sysTest#(parameter N = 4)(
         begin
             for(i=0 ; i <N; i=i+1)
                   begin
-                   cwRegs[i]<= mat1[i] [N*(32)-1:(N-1)*(32)-1];
-                   cnRegs[i]<= mat2[i] [N*(32)-1:(N-1)*(32)-1];
+                   cwRegs[i]<= mat1[j] [i];
+                   cnRegs[i]<= mat2[i] [j];
                   end
               #4;
         end
